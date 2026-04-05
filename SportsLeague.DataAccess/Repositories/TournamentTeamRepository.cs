@@ -2,7 +2,6 @@
 using SportsLeague.DataAccess.Context;
 using SportsLeague.Domain.Entities;
 using SportsLeague.Domain.Interfaces.Repositories;
-using Microsoft.EntityFrameworkCore;
 
 namespace SportsLeague.DataAccess.Repositories;
 
@@ -10,6 +9,7 @@ public class TournamentTeamRepository : GenericRepository<TournamentTeam>, ITour
 {
     public TournamentTeamRepository(LeagueDbContext context) : base(context)
     {
+
     }
 
     public async Task<TournamentTeam?> GetByTournamentAndTeamAsync(int tournamentId, int teamId)
