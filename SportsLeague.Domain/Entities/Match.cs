@@ -1,4 +1,4 @@
-﻿using SportsLeague.Domain.Enums;
+using SportsLeague.Domain.Enums;
 using System;
 using System.Collections.Generic;
 using System.Reflection.Metadata;
@@ -29,6 +29,9 @@ namespace SportsLeague.Domain.Entities
         // Relación 1:N con goles y tarjetas
         public ICollection<Goal> Goals { get; set; } = new List<Goal>();
         public ICollection<Card> Cards { get; set; } = new List<Card>();
+
+        // Relación 1:N con alineaciones
+        public ICollection<MatchLineup> Lineups { get; set; } = new List<MatchLineup>();
 
     }
 
