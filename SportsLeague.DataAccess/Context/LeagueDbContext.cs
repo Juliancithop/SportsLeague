@@ -303,7 +303,7 @@ namespace SportsLeague.DataAccess.Context
                       .OnDelete(DeleteBehavior.Restrict);
             });
 
-            // ── MatchLineup Configuration ──
+            // ── MatchLineup Configuration ──--
             modelBuilder.Entity<MatchLineup>(entity =>
             {
                 entity.HasKey(ml => ml.Id);
